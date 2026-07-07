@@ -131,31 +131,31 @@ This folder contains UI screenshots captured during development. Each image is e
 
 ### Home Screen
 
-<img src="./Home%20Screen.jpeg" alt="Home Screen" width="900" />
+<img src="./screenshots/Home%20Screen.jpeg" alt="Home Screen" width="900" />
 
 ---
 
 ### Dashboard
 
-<img src="./Dashboard%20screen.jpeg" alt="Dashboard Screen" width="900" />
+<img src="./screenshots/Dashboard%20screen.jpeg" alt="Dashboard Screen" width="900" />
 
 ---
 
 ### Login Screen (Continue with Google)
 
-<img src="./Login%20screen.jpeg" alt="Login Screen" width="600" />
+<img src="./screenshots/Login%20screen.jpeg" alt="Login Screen" width="600" />
 
 ---
 
 ### Create Form
 
-<img src="./Create%20Form%20screen.jpeg" alt="Create Form Screen" width="900" />
+<img src="./screenshots/Create%20Form%20screen.jpeg" alt="Create Form Screen" width="900" />
 
 ---
 
 ### AI Survey Generator
 
-<img src="./AI%20Survey%20Generator%20screen.jpeg" alt="AI Survey Generator Screen" width="900" />
+<img src="./screenshots/AI%20Survey%20Generator%20screen.jpeg" alt="AI Survey Generator Screen" width="900" />
 
 ---
 
