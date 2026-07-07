@@ -67,12 +67,14 @@ export function FormBuilder({ survey }: FormBuilderProps) {
   const [, startReorder] = useTransition();
   const [aiDialogOpen, setAiDialogOpen] = useState(false);
   const [optimisticQuestions, setOptimisticQuestions] = useState<Question[]>([]);
-  // Keep SSR output stable by defaulting to empty origin, then set the
-  // concrete origin on the client after mount to avoid hydration mismatches.
-  const [clientOrigin, setClientOrigin] = useState("");
+  // Keep initial value empty so server and client initial render match.
+  // Populate origin on mount to avoid hydration mismatch.
+  const [clientOrigin, setClientOrigin] = useState<string>("");
 
   useEffect(() => {
-    setClientOrigin(window.location.origin);
+    if (typeof window !== "undefined") {
+      setClientOrigin(window.location.origin);
+    }
   }, []);
 
   // Optimistic ordering — keep a local ordered list

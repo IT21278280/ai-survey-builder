@@ -1,10 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
+  // Configure allowed external image hosts used by Next Image
   images: {
-    // allow user profile photos served from Google
-    domains: ["lh3.googleusercontent.com"],
+    // Prefer remotePatterns to allow specific hosts and paths
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+        port: "",
+        pathname: "/:path*",
+      },
+    ],
   },
 };
 
