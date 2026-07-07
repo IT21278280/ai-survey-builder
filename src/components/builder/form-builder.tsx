@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useTransition } from "react";
+import { useMemo, useState, useTransition, useEffect } from "react";
 import {
   DragDropContext,
   Droppable,
@@ -67,9 +67,15 @@ export function FormBuilder({ survey }: FormBuilderProps) {
   const [, startReorder] = useTransition();
   const [aiDialogOpen, setAiDialogOpen] = useState(false);
   const [optimisticQuestions, setOptimisticQuestions] = useState<Question[]>([]);
-  const [clientOrigin] = useState(() =>
-    typeof window !== "undefined" ? window.location.origin : ""
-  );
+  // Keep initial value empty so server and client initial render match.
+  // Populate origin on mount to avoid hydration mismatch.
+  const [clientOrigin, setClientOrigin] = useState<string>("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setClientOrigin(window.location.origin);
+    }
+  }, []);
 
   // Optimistic ordering — keep a local ordered list
   const [orderedIds, setOrderedIds] = useState<string[]>(

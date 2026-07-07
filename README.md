@@ -25,13 +25,13 @@ The project uses the following architecture:
 
 ## Repository Structure
 
-- `src/app/` — application routes, pages, layouts
-- `src/components/` — reusable UI components and feature modules
-- `src/actions/` — server actions for surveys, responses, AI, and dropoff tracking
-- `src/lib/` — shared utilities, database client, auth helper, validations
-- `src/types/` — TypeScript domain definitions
-- `prisma/` — database schema and migration files
-- `public/` — static assets such as icons and images
+- `src/app/` ï¿½ application routes, pages, layouts
+- `src/components/` ï¿½ reusable UI components and feature modules
+- `src/actions/` ï¿½ server actions for surveys, responses, AI, and dropoff tracking
+- `src/lib/` ï¿½ shared utilities, database client, auth helper, validations
+- `src/types/` ï¿½ TypeScript domain definitions
+- `prisma/` ï¿½ database schema and migration files
+- `public/` ï¿½ static assets such as icons and images
 
 ## Installation
 
@@ -66,13 +66,13 @@ npm run dev
 
 ## Usage
 
-- `GET /` — marketing home page
-- `GET /login` — authentication entry point
-- `GET /dashboard` — authenticated dashboard overview
-- `GET /forms` — survey list and creation
-- `GET /forms/[id]/edit` — builder editor
-- `GET /forms/[id]/responses` — response viewer and export
-- `GET /s/[surveyId]` — public survey form for respondents
+- `GET /` ï¿½ marketing home page
+- `GET /login` ï¿½ authentication entry point
+- `GET /dashboard` ï¿½ authenticated dashboard overview
+- `GET /forms` ï¿½ survey list and creation
+- `GET /forms/[id]/edit` ï¿½ builder editor
+- `GET /forms/[id]/responses` ï¿½ response viewer and export
+- `GET /s/[surveyId]` ï¿½ public survey form for respondents
 
 ## CSV Export Format
 
@@ -123,12 +123,41 @@ On Vercel, connect the GitHub repository and configure environment variables. Th
 4. Test routes and behavior locally.
 5. Update documentation for new features.
 
-## Notes
+# Screenshots
 
-I cannot push commits to GitHub directly from this environment because remote repository authentication and network access are not available here. You can add the remote and push the branch with:
+This folder contains UI screenshots captured during development. Each image is embedded below for quick preview on GitHub.
 
-```bash
-git remote add origin https://github.com/IT21278280/ai-survey-builder.git
-git branch -M main
-git push -u origin main
+---
+
+### Home Screen
+
+<img src="./screenshots/Home%20Screen.jpeg" alt="Home Screen" width="900" />
+
+---
+
+### Dashboard
+
+<img src="./screenshots/Dashboard%20screen.jpeg" alt="Dashboard Screen" width="900" />
+
+---
+
+### Login Screen (Continue with Google)
+
+<img src="./screenshots/Login%20screen.jpeg" alt="Login Screen" width="600" />
+
+---
+
+### Create Form
+
+<img src="./screenshots/Create%20Form%20screen.jpeg" alt="Create Form Screen" width="900" />
+
+---
+
+### AI Survey Generator
+
+<img src="./screenshots/AI%20Survey%20Generator%20screen.jpeg" alt="AI Survey Generator Screen" width="900" />
+
+---
+
+
 ```

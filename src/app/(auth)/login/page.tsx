@@ -5,7 +5,9 @@ export const metadata: Metadata = {
   title: "Sign In",
 };
 
-export default function LoginPage() {
+export default function LoginPage({ searchParams }: { searchParams?: { error?: string } }) {
+  const error = searchParams?.error;
+
   return (
     <div className="min-h-screen bg-linear-to-br from-indigo-50 via-white to-purple-50 flex items-center">
       <main className="mx-auto w-full max-w-5xl p-6">
@@ -37,6 +39,19 @@ export default function LoginPage() {
               </div>
             </div>
           </section>
+
+          {/* Global error banner (e.g. OAuthAccountNotLinked) */}
+          {error === "OAuthAccountNotLinked" && (
+            <div className="md:col-span-2">
+              <div className="mb-4 rounded-lg border-l-4 border-rose-500 bg-rose-50 p-4">
+                <p className="text-sm font-semibold text-rose-700">Account already linked</p>
+                <p className="mt-1 text-sm text-rose-700">
+                  The Google account you tried to sign in with is already associated with a different user in the system.
+                  If this is your account, sign in with the same provider you originally used or contact support to merge accounts.
+                </p>
+              </div>
+            </div>
+          )}
 
           {/* Right: login card */}
           <section className="order-1 md:order-2">
