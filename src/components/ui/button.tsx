@@ -45,8 +45,10 @@ export function Button({
     <Comp
       className={cn(
         "inline-flex items-center justify-center whitespace-nowrap font-medium transition-all",
+        "motion-reduce:transition-none",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
         "disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
+        "active:translate-y-[0.5px] active:scale-[0.995]",
         variantClasses[variant],
         sizeClasses[size],
         className
